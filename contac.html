@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills Portfolio</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: url('image/C.jpg') no-repeat center center/cover;
+            background-attachment: fixed;
+            overflow-x: hidden;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 100px; /* Increased distance */
+            padding-top: 50px;
+        }
+
+        .skill-card {
+            display: flex;
+            align-items: center;
+            gap: 50px; /* Increased spacing between image and text */
+            text-align: center;
+            width: 80%;
+            justify-content: center;
+            position: relative;
+        }
+
+        .skill-card:nth-child(odd) {
+            flex-direction: row;
+        }
+
+        .skill-card:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .skill-card img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 5px solid #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s;
+        }
+
+        .skill-card img:hover {
+            transform: scale(1.1);
+        }
+
+        .skill-card h3 {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+
+        .skill-card button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: rgba(16, 137, 236, 0.8);
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .skill-card button:hover {
+            background-color: rgba(0, 0, 0, 1);
+        }
+
+        footer {
+            text-align: center;
+            font-size: 18px;
+            color: white;
+            padding: 10px;
+            margin-top: auto; /* Push footer to the bottom */
+        }
+
+        /* Left Arrow */
+        .arrow {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            width: 60px;
+            height: 60px;
+            background-color: rgba(255, 255, 255, 0.7);
+            color: black;
+            font-size: 30px;
+            font-weight: bold;
+            text-align: center;
+            line-height: 60px;
+            border-radius: 50%;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .arrow:hover {
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+    </style>
+</head>
+<body>
+    <div class="skill-card">
+        <img src="image/ins.jpeg" alt="HTML">
+        <h3>Instagram</h3>
+        <button onclick="window.open('https://www.instagram.com/the_code_crafter_?igsh=MWkzNmZkbXhld2hmMg==', '_blank')">FOLLOW</button>
+    </div>
+    <div class="skill-card">
+        <img src="image/gmail.jpeg" alt="Gmail">
+        <h3>Gmail</h3>
+        <button onclick="window.location.href='mailto:tamiltrickyyt@gmail.com?subject=Contact&body=Hello, I would like to get in touch.'">MAIL ME</button>
+    </div>
+    <div class="skill-card">
+        <img src="image/link.jpeg" alt="LinkedIn">
+        <h3>LinkedIn</h3>
+        <button onclick="window.open('https://www.linkedin.com/in/sarjan-p-7a97862a0?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app', '_blank')">CONNECT</button>
+    </div>
+    <div class="skill-card">
+        <img src="image/git.jpeg" alt="GitHub">
+        <h3>GitHub</h3>
+        <button onclick="window.open('https://github.com/Anonymous6364', '_blank')">VIEW REPO</button>
+    </div>
+
+    <!-- Left Arrow -->
+    <div class="arrow" onclick="navigateToQualification()">←</div>
+
+    <center>
+        <footer>All rights reserved</footer>
+    </center>
+
+    <script>
+        // Navigation for the left arrow
+        function navigateToQualification() {
+            window.location.href = 'qualification.html';
+        }
+    </script>
+</body>
+</html>
